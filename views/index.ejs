@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Kint ICT Hackathon</title>
+    <style>
+      body {
+        background-color: #fffae7;
+      }
+      .container {
+        margin-top: 0px;
+    }
+    .box1 {
+        background-color: #c09176;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        color: #222;
+    }
+
+    .box6{
+        background-color: #2f484f;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        color: #fff;
+    }
+    .box2{
+        color: #fff;
+        background-color: #1d3237;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .box3{
+        color: #fff;
+        background-color: #647e7b;
+                padding-top: 30px;
+        padding-bottom: 30px;
+        
+    }
+    .box4{
+        color: #222;
+            background-color: #d7d1af;
+                    padding-top: 30px;
+        padding-bottom: 30px;
+        }
+    .box5{
+        color: #222;
+        background-color: #b7b89a;
+                padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .button {
+        font-size: 1.4em;
+        border:  0;
+        background-color: #1d3237;
+    }
+
+    .button:hover{
+        background-color: #3d656e;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+            <div class="container">
+                    <form method="POST" action="/">
+                        <div class="box1 row">
+                        <div class="offset-lg-2 col-lg-8 box1">
+                            <h2>
+                                Register
+                            </h2>
+                            <br>
+                            <div class="form-group row">
+                            <label for="Teamname" class="col-sm-2 col-form-label">Teamname</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Teamname" placeholder="Teamname" name="Teamname" required>
+                            </div>
+                            </div>
+                            <div class="form-group row">
+                            <label for="Password" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="Password" placeholder="Password" name="Password" required> 
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="col-lg-6 box2">
+                                <h3>Member 1</h3>  
+                                <div class="form-group row">
+                                    <label for="Name1" class="col-sm-2 col-form-label">Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="Name1" placeholder="Name" name="Name1" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="Surname1" class="col-sm-2 col-form-label">Surname</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="Surname1" placeholder="Surname" name="Surname1" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="Email1" class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="Email1" placeholder="Email" name="Email1" required>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-lg-6 box3">
+                                <h3>Member 2</h3>
+                                <div class="form-group row">
+                                    <label for="Name2" class="col-sm-2 col-form-label">Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="Name2" placeholder="Name" name="Name2" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="Surname2" class="col-sm-2 col-form-label">Surname</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="Surname2" placeholder="Surname" name="Surname2" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="Email2" class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="Email2" placeholder="Email" name="Email2" required>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                        <div class="row">
+                            <div class="col-lg-6 box4">
+                                <h3>Member 3</h3>
+                                <div class="form-group row">
+                                    <label for="Name3" class="col-sm-2 col-form-label">Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="Name3" placeholder="Name" name="Name3" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="Surname3" class="col-sm-2 col-form-label">Surname</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="Surname3" placeholder="Surname" name="Surname3" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="Email3" class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="Email3" placeholder="Email" name="Email3" required>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-lg-6 box5">
+                                <h3>Member 4</h3>
+                                <div class="form-group row">
+                                    <label for="Name4" class="col-sm-2 col-form-label">Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="Name4" placeholder="Name" name="Name4" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="Surname4" class="col-sm-2 col-form-label">Surname</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="Surname4" placeholder="Surname" name="Surname4" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="Email4" class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="Email4" placeholder="Email" name="Email4" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="form-group row box6">
+                            <div class=" col-sm-12 text-center">
+                                <button type="submit" class="btn btn-primary button" v-on:click="sendIt" >Register</button>
+                            </div>
+                        </div>
+                  </form>
+                  </div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
