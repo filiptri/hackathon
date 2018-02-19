@@ -64,8 +64,8 @@ app.post('/login', (req, res) => {
             method: "POST",
             json: requestData,
             
-        }, function (error, response, body) {  
-            console.log(r);
+        }, function (error, response, body) { 
+            var r = JSON.parse(body.Result)
             if (r){
                 res.cookie('auth', r.AuthorizationToken)
                 res.cookie('teamid', r.TeamId)
@@ -73,6 +73,29 @@ app.post('/login', (req, res) => {
             res.render('gotov_login', {"err":body.Errors})
         })
     }   
+)
+
+//zadatak 3
+app.get('/tim', (req, res) => {
+        const auth = req.cookies.auth;
+        const id = req.cookies.teamid;           
+        let urla = 'http://52.233.158.172/change/api/hr/team/details/'+id
+
+        request({
+            url: urla,
+            method: "GET",
+            headers: {
+                'X-Authorization': auth
+            }
+            
+        }, function (error, response, body) { 
+            var b = JSON.parse(body)
+            var r = JSON.parse(b.Result)
+            console.log(r)
+            res.render('team', {"team":r})
+        })
+        
+    }
 )
 
 

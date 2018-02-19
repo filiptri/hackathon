@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Kint ICT Hackathon</title>
+    <style>
+      body {
+        background-color: #fffae7;
+      }
+      .container {
+        margin-top: 0px;
+    }
+    .box1 {
+        background-color: #c09176;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        color: #222;
+    }
+
+    .box6{
+        background-color: #2f484f;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        color: #fff;
+    }
+    .box2{
+        color: #fff;
+        background-color: #1d3237;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .box3{
+        color: #fff;
+        background-color: #647e7b;
+                padding-top: 30px;
+        padding-bottom: 30px;
+        
+    }
+    .box4{
+        color: #222;
+            background-color: #d7d1af;
+                    padding-top: 30px;
+        padding-bottom: 30px;
+        }
+    .box5{
+        color: #222;
+        background-color: #b7b89a;
+                padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .button {
+        font-size: 1.4em;
+        border:  0;
+        background-color: #1d3237;
+    }
+
+    .button:hover{
+        background-color: #3d656e;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="box3 col-md-6 offset-md-3">
+                    <h3>Tim: <%= team.TeamName %></h3>
+                    <br>
+                    <h4>Članovi tima</h4>
+                    <table class="table">
+                        <% for (let m in team.Members) { %>
+                            <tr>
+                                <td><%= team.Members[m].Name %></td>
+                                <td><%= team.Members[m].Surname %></td>   
+                                <td><%= team.Members[m].Mail %></td> 
+                            </tr>  
+                        <% } %>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
