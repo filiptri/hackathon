@@ -66,20 +66,17 @@
     <div id="app">
         <div class="container">
             <div class="row">
-                <% if (sc == 200) { %>
+                <% if (err.length == 0) { %>
                     <div class="box3 col-md-6 offset-md-3">
-                        <h3>Čestitamo!</h3>
-                        <p>Uspješno ste se registrirali.</p>
+                        <p>Uspješno ste se prijavili.</p>
                     </div>
                 <% } else { %>
                     <div class="box1 col-md-6 offset-md-3">
-                        <h3>Došlo je do pogreške!</h3>
                         <%= err %>
                     </div>
                 <% } %>
             </div>
         </div>
     </div>
-    <!-- built files will be auto injected -->
   </body>
 </html>

@@ -3,6 +3,7 @@ const app = express()
 const request = require('request')
 const ejs = require('ejs')
 const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
 
 app.set('views', './views')
 app.set('view engine', 'ejs')
@@ -12,6 +13,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.text())
 app.use(bodyParser.urlencoded())
 
+app.use(cookieParser())
 
 // zadatak 1
 app.get('/', (req, res) => {
@@ -41,6 +43,36 @@ app.post('/', (req, res) => {
                 res.render('gotovo', {"err":body.Errors, "sc":response.statusCode})
         })
     }
+)
+
+// zadatak 2
+app.get('/login', (req, res) => {
+        res.render('login')
+    }
+)
+
+app.post('/login', (req, res) => {
+        let requestData = {
+            "Teamname": req.body.Teamname,
+            "Password": req.body.Password
+        }
+
+        let urla = 'http://52.233.158.172/change/api/hr/account/login';
+
+        request({
+            url: urla,
+            method: "POST",
+            json: requestData,
+            
+        }, function (error, response, body) {  
+            console.log(r);
+            if (r){
+                res.cookie('auth', r.AuthorizationToken)
+                res.cookie('teamid', r.TeamId)
+            }
+            res.render('gotov_login', {"err":body.Errors})
+        })
+    }   
 )
 
 
